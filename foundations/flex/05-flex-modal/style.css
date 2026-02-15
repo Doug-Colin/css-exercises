@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -19,7 +20,9 @@ body {
   background: white;
   width: 480px;
   border-radius: 10px;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex; /* make modal flex container to divide into columns */
+  padding: 16px;
 }
 
 .icon {
@@ -27,12 +30,27 @@ body {
   font-size: 26px;
   font-weight: 700;
   background: lavender;
-  width: 42px;
+  min-width: 42px; /* prevent icon from shrinking */
   height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.content {
+  margin-left: 16px; /* space between icon and content */
+}
+
+.header-row {
+  display: flex; /* make header row a flex container to position close button */
+  align-items: center; /* vertically center header text and close button */
+  margin-bottom: 8px;
+}
+
+.header {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .close-button {
@@ -48,6 +66,11 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+  margin-left: auto; /* push close button to right edge of header row */
+}
+
+.text {
+  margin-bottom: 16px;
 }
 
 button {
